@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Javascript toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="show-email">
+                
+            </div>
+        </nav>
+    </header>
+
+  
+        <div class="hide-page">
+            <!-- User Login And Registration -->
+            <div id="Login-Registration-Container" class="container-sm d-flex justify-content-center align-items-center flex-column ">
+                <!-- Registration Form  -->
+                <div id="REGISTRATION-FORM">
+                    <div class="register-page d-flex justify-content-center align-items-center flex-column  mt-3 ">
+                        <div class="form">
+                            <h2 class=" mb-4">Register</h2>
+                            <div class="inputbox mb-4">
+                                <input class="pt-2" type="text" required="" id="register-email">
+                                <label for="register-email">Email</label>
+                                <i class="fa fa-envelope ms-4" style="font-size:20px"></i>
+                            </div>
+                            <div class="inputbox mt-5 ">
+                                <input class="pt-2" type="password" required="" id="register-password">
+                                <label for="register-password">Password</label>
+                                <i class="fa fa-lock" style="font-size:24px" id="register-password"></i>
+                            </div>
+                            <button id="register-btn" class=" mt-5 Register btn btn-outline-light mb-4"
+                                onclick="handleUserRegistration()">Register</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Registration Form -->
+                <!-- Login Form -->
+                <div id="LOGIN-FORM">
+                    <div class="login-page d-flex justify-content-center align-items-center flex-column  ">
+                        <div class="form ">
+                            <h2 class=" mb-4">Login</h2>
+                            <div class="inputbox ">
+                                <input class="pt-2" type="text" required="" id="login-email">
+                                <label for="login-email">Email</label>
+                                <i class="fa fa-envelope ms-4" style="font-size:20px"></i>
+                            </div>
+                            <div class="inputbox">
+                                <input class="pt-2" type="password" required="" id="login-password">
+                                <label for="login-password">Password</label>
+                                <i class="fa fa-lock" style="font-size:24px"></i>
+                            </div>
+                            <button id="login-btn" class="btn mt-5 btn-outline-light mb-4 "
+                                onclick="handleUserLogin()">Login</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- End of Login Form -->
+        </div>
+        <!-- User Login And Registration -->
+        <!-- Todo Management -->
+        <div class="todo-management">
+            <div class="manage-todo">
+                <div class="container ">
+                    <div class="row mt-5 ">
+                        <div class="todo-btns col-md-6 text-center ">
+                            <h3>Buttons</h3>
+                            <div class="all_btn border border-1 border-black rounded-2 py-3 px-4">
+        
+                                <button class="btn btn-danger px-5 " onclick="handleUpdateTodo()">Update Todos</button>
+                                <button class="btn btn-danger px-5 " onclick="handleDeleteTodo()">Delete Todos</button>
+                                <button class="btn btn-danger px-5 " onclick="handlePrintTodo()">Show Table</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6  text-center ">
+                            <h3>Form</h3>
+                            <div id="add-todo" class="form border border-1 border-black rounded-2 pt-5">
+                                <form onsubmit="handleCreateTodo()">
+                                    <input id="title" type="text" placeholder="Title">
+                                    <input id="description" type="text " placeholder="Description"> <br>
+                                    <input id="date" type="date">
+                                    <input type="submit" value="Add Todo" class="btn btn-success mt-1">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="output-box mt-4 ">
+                <div class="container">
+                    <div class="output-heading text-center ">
+                        <h3>Output / Result</h3>
+                    </div>
+                    <div id="output" class="output-div py-3 table-responsive ">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th> Title</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="show-output">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class=" w-100 d-flex justify-content-center">
+                        <button class="btn btn-outline-danger mt-4" onclick="clearOutput()"> Clear Output </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+    <!-- JavaScript Toast -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Javascript -->
+    <script src="js/script.js"></script>
+</body>
+</body>
+
+</html>
